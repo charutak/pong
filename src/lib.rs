@@ -36,7 +36,7 @@ pub fn start() -> Result<(), JsValue> {
     let program = link_program(&context, &vert_shader, &frag_shader)?;
     context.use_program(Some(&program));
 
-    let vertices: [f32; 9] = [-0.01, -0.01, 0.0, 0.01, -0.01, 0.0, 0.0, 0.01, 0.0];
+    let vertices: [f32; 9] = [-0.7, -0.9, 0.0, 0.9, -0.9, 0.0, 0.0, 0.6, 0.0];
 
     let buffer = context.create_buffer().ok_or("failed to create buffer")?;
     context.bind_buffer(WebGlRenderingContext::ARRAY_BUFFER, Some(&buffer));
